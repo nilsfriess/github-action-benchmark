@@ -245,7 +245,7 @@ async function leaveComment(commitId: string, body: string, commentId: string, t
     const pr = github.context.payload.pull_request;
 
     if (github.context.eventName === 'issue_comment')
-	core.debug('Triggered from comment:\n' + JSON.stringify(github.context))
+	core.debug('Triggered by comment:\n' + JSON.stringify(github.context))
 
     return await (pr?.number
         ? leavePRComment(repoMetadata.owner.login, repoMetadata.name, pr.number, body, commentId, token)
