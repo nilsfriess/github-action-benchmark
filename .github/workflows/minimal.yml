@@ -1,4 +1,4 @@
-name: Example for minimal setup
+name: Example
 on:
   issue_comment:
     types: [created, edited, deleted]
