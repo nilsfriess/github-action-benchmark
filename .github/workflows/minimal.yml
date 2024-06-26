@@ -12,6 +12,7 @@ jobs:
     name: Run minimal steps to run github-action-benchmark
     runs-on: ubuntu-latest
     steps:
+      - run: npm run build
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v4
         with:
@@ -30,3 +31,4 @@ jobs:
           output-file-path: examples/go/output.txt
           external-data-json-path: ./cache/benchmark-data.json
           fail-on-alert: true
+	  comment-always: true
