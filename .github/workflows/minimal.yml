@@ -1,4 +1,4 @@
-name: Example for minimal setup
+name: Example
 on:
   issue_comment:
     types: [created, edited, deleted]
@@ -31,4 +31,4 @@ jobs:
           output-file-path: examples/go/output.txt
           external-data-json-path: ./cache/benchmark-data.json
           fail-on-alert: true
-	  comment-always: true
+          comment-always: true
