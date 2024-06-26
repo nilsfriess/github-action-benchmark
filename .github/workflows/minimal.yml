@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: npm ci
       - run: npm run build
       - uses: actions/setup-go@v4
         with:
@@ -32,4 +33,3 @@ jobs:
           external-data-json-path: ./cache/benchmark-data.json
           fail-on-alert: true
           comment-always: true
-
